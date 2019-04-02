@@ -1,0 +1,265 @@
+a!--a
+    0 ./fire.txt     0 ./quo.txt     1 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     1 ./desert.txt 
+†·À
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     2 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    26478 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    1869901409 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    1935762017 ./fire.txt     101 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     1935762017 ./quo.txt     6579560 ./cross.txt     0 ./desert.txt 
+
+    14932576 ./fire.txt     0 ./quo.txt     1952539233 ./cross.txt     25701 ./desert.txt 
+
+    0 ./fire.txt     14909024 ./quo.txt     0 ./cross.txt     1633837665 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     13840640 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     13755392 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+·
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+V
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    2 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    3 ./fire.txt     6 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+nt
+    1 ./fire.txt     6 ./quo.txt     1 ./cross.txt     0 ./desert.txt 
+absent-minded
+    0 ./fire.txt     0 ./quo.txt     2 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     1 ./desert.txt 
+@w¶
+    0 ./fire.txt     0 ./quo.txt     4 ./cross.txt     2 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     5 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    25202 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    1869832801 ./fire.txt     1684365938 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     1903387233 ./quo.txt     25973 ./cross.txt     0 ./desert.txt 
+
+    13873408 ./fire.txt     0 ./quo.txt     1953718881 ./cross.txt     7235937 ./desert.txt 
+
+    0 ./fire.txt     11228992 ./quo.txt     0 ./cross.txt     1953718881 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     11230016 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     13821952 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    1 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+ating
+    1 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+mpanied
+    11 ./fire.txt     33 ./quo.txt     10 ./cross.txt     0 ./desert.txt 
+accompanies
+    0 ./fire.txt     1 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     2 ./quo.txt     2 ./cross.txt     0 ./desert.txt 
+@èù
+    0 ./fire.txt     0 ./quo.txt     5 ./cross.txt     6 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     1 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    0 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    26739 ./fire.txt     0 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    1768714349 ./fire.txt     1684367475 ./quo.txt     0 ./cross.txt     0 ./desert.txt 
+
+    1868784481 ./fire.txt     1768714349 ./quo.txt     1701668979 ./cross.txt     29806 ./desert.txt 
+
+    0 ./fire.txt     1868784481 ./quo.txt     25714 ./cross.txt     0 ./desert.txt 
+
+    11035456 ./fire.txt     0 ./quo.txt     1868784481 ./cross.txt     1851876466 ./desert.txt 
+
+    0 ./fire.txt     10557248 ./quo.txt     0 ./cross.txt     1868784481 ./desert.txt 
+6684864    ê'f

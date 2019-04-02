@@ -1,0 +1,20 @@
+{\huge \bf Function Prototypes}
+
+\begin{small}
+\begin{verbatim}
+int printf(const char *format, ...);
+
+size_t strlen(const char *s);
+char *strcpy(char *dest, const char *src);
+char *strncpy(char *dest, const char *src, size_t n);
+
+ssize_t read(int fd, void *buffer, size_t maxbytes);
+ssize_t write(int fd, void *buffer, size_t maxbytes);
+
+size_t fread(void *ptr, size_t elem_size, 
+             size_t num_elem, FILE *stream);
+
+size_t fwrite(const void *ptr, size_t elem_size,
+              size_t num_elem, FILE *stream);
+\end{verbatim}
+\end{small}

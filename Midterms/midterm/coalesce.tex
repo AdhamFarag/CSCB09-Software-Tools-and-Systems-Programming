@@ -1,0 +1,33 @@
+\question{6}
+
+Here is the \verb|struct block| from Assignment 2.
+
+\begin{small}
+\begin{verbatim}
+struct block {
+  void *addr; /*start address of memory for this block */
+  int size;
+  struct block *next;
+};
+\end{verbatim}
+\end{small}
+
+Suppose \verb|freelist| is already initialized and contains zero or more blocks, and that \verb|freelist| is sorted by increasing \verb|addr| values.
+
+One thing we might like to do is {\bf coalesce} blocks of free memory into larger blocks, so that future calls to \verb|smalloc| are more likely to succeed.
+
+For example, suppose that the first block in \verb|freelist| has \verb|addr = 500| and \verb|size = 100|. Suppose also that the second block in \verb|freelist| has \verb|addr = 600| and \verb|size = 50|. What we can do is replace this by a single block with \verb|addr = 500| and \verb|size = 150|.
+
+Write function \verb|coalesce| below that coalesces all possible blocks in \verb|freelist|. For full marks, you must not have any memory leaks.
+
+\begin{small}
+\begin{verbatim}
+void coalesce (block *freelist) {
+\end{verbatim}
+\end{small}
+
+\newpage
+
+[more space for your \verb|coalesce| function]
+
+\newpage

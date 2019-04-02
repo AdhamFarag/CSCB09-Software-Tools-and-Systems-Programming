@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+reffile=$1
+
+shift
+
+total=0
+
+while [ $# -gt 0 ]; 
+do
+  
+for fname in $1/*;
+do
+    
+if [ $fname -nt $reffile ]; 
+then
+      
+total=`expr $total + 1`
+    
+fi
+  
+done
+  
+shift
+
+done
+
+echo $total

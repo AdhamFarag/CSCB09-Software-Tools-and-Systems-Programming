@@ -1,0 +1,38 @@
+Question 1
+
+A. Hard link. If a symbolic link were used, 
+then removing the original filename also removes the file contents. 
+With hard links, both names have to be removed for the file contents to be 
+lost.
+
+
+B. *.c
+
+
+
+-----
+
+Question 2
+
+A. see date.sh.
+
+B. see filedates.sh.
+
+-----
+
+Question 3
+
+See ll.c.
+
+-----
+
+Question 4
+
+	A. No, free cannot be used at the bottom of the code to fix the memory leak. The malloc'd pointer stored in x is lost when "x = &y" happens. A free would have to be inserted prior to this line to avoid the memory leak.
+
+
+B. 
+
+Setup complete
+About to terminate
+

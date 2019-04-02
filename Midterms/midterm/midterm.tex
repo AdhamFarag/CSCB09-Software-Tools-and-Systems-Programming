@@ -1,0 +1,292 @@
+\long\def\ignore#1{} % to comment out parts of the file
+
+%% New conditional to allow formatting of either exam paper or solutions.
+\newif\ifsolutions % starts out false by default
+%\solutionstrue % comment out to format solutions and marking scheme
+
+%% New conditional to allow formatting of marking sheet
+\newif\ifmarking % starts out false by default
+%\markingtrue % comment out to format marking scheme
+
+\documentclass[11pt]{article}
+\usepackage{fancyhdr,rotating,multicol,graphicx, verbatim}
+\usepackage{amsmath,amssymb}
+%\usepackage{amssymb}
+
+%% Dirty trick so that math symbols will be bold when text is.
+\let\seiresfb=\bfseries
+\def\bfseries{\seiresfb\boldmath}
+
+%% Custom page layout.
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-2in}
+\setlength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-.25\headheight}
+\setlength{\headsep}{.5in}
+\addtolength{\headsep}{-.75\headheight}
+\setlength{\footskip}{.5in}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-1.5in}
+\setlength{\oddsidemargin}{-.25in}
+\setlength{\evensidemargin}{-.25in}
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{0pt}
+\flushbottom
+
+\allowdisplaybreaks
+
+%% Spacing macros (with default argument).
+\newcommand{\vstretch}[1][1]{\vspace*{\stretch{#1}}}
+\newcommand{\hstretch}[1][1]{\hspace*{\stretch{#1}}}
+
+%% Macros to generate question and part numbers automatically.
+\newcounter{temp}
+\newcounter{bonusmarks}
+\setcounter{bonusmarks}{1}
+\newcounter{totalmarks}
+\setcounter{totalmarks}{0}
+\newcounter{questionnumber}
+\setcounter{questionnumber}{0}
+\newcounter{subquestionnumber}[questionnumber]
+\setcounter{subquestionnumber}{0}
+\renewcommand{\thesubquestionnumber}{\alph{subquestionnumber}}
+\makeatletter
+\newcommand{\bonus}[2][]%
+  {\ifx\empty#2\empty\else\addtocounter{bonusmarks}{#2}\fi
+   \@startsection{bonus}{6}{0pt}{-1.25ex plus -2.5ex minus -.75ex}
+   {.75ex plus .75ex minus .5ex}{\normalfont}*
+     {{\bfseries\Large Bonus. } #1 {\scshape
+      \ifx\empty#2\empty(continued)\else[#2 mark\ifnum#2>1s\fi]\fi}}}
+\newcommand{\question}[2][]%
+  {\ifx\empty#2\empty\else\addtocounter{totalmarks}{#2}
+   \setcounter{temp}{#2}\addtocounter{temp}{-1}\refstepcounter{temp}
+   \addtocounter{questionnumber}{1}\label{Q\thequestionnumber Marks}
+   \addtocounter{questionnumber}{-1}\refstepcounter{questionnumber}\fi
+   \@startsection{question}{7}{0pt}{-1.25ex plus -2.5ex minus -.75ex}
+   {.75ex plus .75ex minus .5ex}{\normalfont}*
+     {{\bfseries\Large Question \thequestionnumber. } #1 {\scshape
+      \ifx\empty#2\empty(continued)\else[#2 mark\ifnum#2>1s\fi]\fi}}}
+\newcommand{\subquestion}[2][]%
+  {\ifx\empty#2\empty\else\refstepcounter{subquestionnumber}\fi
+   \@startsection{subquestion}{8}{0pt}{-.75ex plus -1.5ex minus -.5ex}
+   {.5ex plus .5ex minus .25ex}{\normalfont}*
+     {{\bfseries\large Part (\thesubquestionnumber) } #1 {\scshape
+      \ifx\empty#2\empty(continued)\else[#2 mark\ifnum#2>1s\fi]\fi}}}
+\newcommand{\subquestionnospace}[2][]%
+  {\ifx\empty#2\empty\else\refstepcounter{subquestionnumber}\fi
+   \@startsection{subquestion}{8}{0pt}{-.75ex plus -1.5ex minus -.5ex}
+   {-.5ex plus -.5ex minus -.25ex}{\normalfont}*
+     {{\bfseries\large Part (\thesubquestionnumber) } #1 {\scshape
+      \ifx\empty#2\empty(continued)\else[#2 mark\ifnum#2>1s\fi]\fi}}}
+\newcommand\heading%
+  {\@startsection{heading}{9}{0pt}{-.75ex plus -1.5ex minus -.5ex}
+   {-.5em plus -.5em minus -.25em}{\normalfont\scshape}*}
+\makeatother
+
+%% Macro to produce a list of question numbers and marks.
+\newcommand{\markingguide}[1][]%
+  {\setcounter{temp}{0\ref{EndOfExam}}%
+   \begin{tabular}{r@{\ \protect\urule{.5in}/}r}
+%  \multicolumn{2}{c}{\textsc{\large Marking Guide}}\\[4ex]
+   \ifnum0<0\ref{BonusMarks}
+      \begin{tabular}[b]{@{}l@{}}
+         \textsc{Bonus}\\   \textsc{Marks}
+      \end{tabular}: & \ref{BonusMarks}\\[4ex]
+   \fi\ifx\empty#1\empty
+      \ifnum0<0\ref{Q0Marks}\recmarkingguide{0}
+      \else\recmarkingguide{1}\fi
+   \else\recmarkingguide{#1}\fi\\[4ex]
+      \textsc{TOTAL}: & \ref{TotalMarks}
+   \end{tabular}}
+\newcommand{\recmarkingguide}[1]%
+  {\ifnum\thetemp>#1\addtocounter{temp}{-1}
+   \recmarkingguide{#1}\\[2ex]\addtocounter{temp}{1}\fi
+   \#~\thetemp: & \ref{Q\thetemp Marks}}
+
+%% Macros for drawing "underline" rules and half-boxes.
+\newcommand{\urule}[2][.5pt]{\rule[-2pt]{#2}{#1}} % "underline" rule
+\newcommand{\hb}{\urule{1.5em}}                   % horizontal bar
+\newcommand{\vb}{\urule[1ex]{.5pt}}               % vertical bar
+\newcommand{\studentnumberboxes}%
+  {\vb\hb\vb\hb\vb\hb\vb\hb\vb\hb\vb\hb\vb\hb\vb\hb\vb\hb\vb}
+
+%% Macros for making checkboxes and checklists.
+\newcommand{\cbox}[1]{{\fboxrule.125ex\fboxsep0ex
+   \framebox[2.75ex]{\rule[-.75ex]{0ex}{2.75ex}\smash{#1}}}}
+\newcommand{\cmark}{\raisebox{.0625ex}{$\surd$\kern.125ex}}
+\newcommand{\xmark}{\raisebox{-.1875ex}{\kern.0625ex{X}}}
+\newcommand{\checkbox}{{\sf\cbox{}}}
+\newcommand{\checkedbox}{{\sf\cbox{\cmark}}}
+\newcommand{\markedbox}{{\sf\cbox{\xmark}}}
+\newenvironment{checklist}{\begin{list}{\checkbox}{}}{\end{list}}
+\newcommand{\checkeditem}{\item[\checkedbox]}
+\newcommand{\markeditem}{\item[\markedbox]}
+
+%% Itemize-like environment with "condensed" interline spacing.
+\newenvironment{points}[1][$\bullet$]
+  {\begin{list}{{#1}}
+     {\setlength{\parsep}{0pt plus 0.5pt minus 0pt}
+      \setlength{\topsep}{0pt plus 0.5pt minus 0pt}
+      \setlength{\itemsep}{0pt plus 0.5pt minus 0pt}}}
+  {\end{list}}
+
+%% Various formats.
+\let\longem=\textsl
+\let\strong=\textbf
+\let\code=\texttt
+
+%% Various symbols.
+\newcommand{\caret}{\symbol{"5E}} % caret ^
+\newcommand{\lcurl}{\symbol{"7B}} % left curly bracket {
+\newcommand{\rcurl}{\symbol{"7D}} % right curly bracket }
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\bigOh}{\mathcal{O}}
+
+%% Custom headers and footers.
+\pagestyle{fancyplain}
+\let\headrule=\empty
+\let\footrule=\empty
+\lhead{\fancyplain{}{{CSC\,209H5\,S}}}
+\chead{\fancyplain{}
+   {{\scshape\large Midterm\ifsolutions\ --- Solutions\fi}}}
+\rhead{\fancyplain{}{{Winter 2015}}}
+\lfoot{\fancyplain{{Total Pages = \pageref{EndOfExam}}}
+   {{\small Student \#: }{\tiny\studentnumberboxes}}}
+\cfoot{\fancyplain{{Page \thepage}}
+   {{Page \thepage\ of \pageref{EndOfExam}}}}
+\rfoot{{\scshape\small cont'd$\ldots$}}
+
+
+\begin{document}
+
+%% Cover Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifsolutions
+\else
+\thispagestyle{plain}
+
+\vspace*{-.2in}
+\parbox{2.75in}{
+\centering\large
+ {CSC\,209H5\,S} {2015} {Midterm}\\
+ Duration --- {50 minutes}\\
+      Aids allowed: none
+}%parbox
+\hfill
+  \parbox{4in}{ \begin{tabular}{@{}rl@{}}
+   \strong{Student Number:} & \studentnumberboxes \\[2ex]
+   % \strong{Lab day, time, room:} & \hrulefill
+\end{tabular}
+}%parbox
+%\end{center}
+
+\begin{center}
+\begin{tabular}{@{}rl@{\qquad}rl@{}}
+       \strong{Last Name:} & \urule{2in}
+       \hspace{.2in}\strong{First Name:} & \urule{2in} \\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{cc}
+    \strong{Lecture Section:}  1 &
+    \hspace{1in}\strong{Instructor: Daniel Zingaro}  %\urule{2in} &
+\end{tabular}
+\end{center}
+
+  \rule[.1875\baselineskip]{\textwidth}{1pt}
+\begin{center}
+  \vspace*{-.25in} \Large \longem{Do \strong{not} turn this page until you
+    have received the signal to start.} \\
+  (Please fill out the identification section above, \textbf{write your name on the back of the test}, and read the instructions below.) \\
+ {\slshape\Large Good Luck!}
+  \rule[.1875\baselineskip]{\textwidth}{1pt}\\
+\end{center}
+
+\normalsize
+\begin{center}
+\vspace*{-.2in}
+  \parbox{5in}{ This midterm consists of \ref{EndOfExam}
+    {question\ifnum1<0\ref{EndOfExam}s\fi} on \pageref{EndOfExam}
+    {page\ifnum1<0\pageref{EndOfExam}s\fi} (including this one).
+    \longem{When you receive the signal to start, please make sure that
+      your copy is complete.}
+    
+    %    For 1 bonus mark write your student number at the bottom of pages
+%    2-\pageref{EndOfExam} of this test and provide your lab day, time, and room.
+   
+    If you use any space for rough work, indicate clearly
+    what you want marked.
+
+}%parbox
+\qquad
+\markingguide\\
+  \rule[.1875\baselineskip]{\textwidth}{1pt}
+\end{center}
+
+\fi%solutions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Cover Page %%
+
+% Question 1
+\newpage 
+\input{bugs.tex}
+\newpage
+\input{short.tex}
+\newpage
+\input{coalesce.tex}
+\newpage
+\input{readwrite.tex}
+\newpage
+\input{api.tex}
+\ifsolutions
+\else
+\newpage
+\newpage
+\textit{[Use the space below for rough work. This page will not be marked unless you clearly indicate the part of your work that you want us to mark.]}
+%\newpage
+%\textit{[Use the space below for rough work. This page will not be marked unless you clearly indicate the part of your work that you want us to mark.]}
+
+
+\fi
+
+\ifsolutions
+\else
+\newpage
+\begin{center}
+\begin{tabular}{@{}rl@{\qquad}rl@{}}
+       \strong{Last Name:} & \urule{2in}
+       \hspace{.2in}\strong{First Name:} & \urule{2in} \\
+\end{tabular} \\
+\end{center}
+\vspace*{1cm}
+%\input{api.tex}
+%\textbf{Use the remainder of this page for rough work.}
+\fi
+
+\lfoot{\fancyplain{{Total Pages = \pageref{EndOfExam}}}}
+
+\ifsolutions
+\else
+%\center{\large\textbf{You can tear this page off, but we will collect it.
+%    You must fill in your student number if you tear it off, and you will
+%    lose 20\% if you keep this page.}}
+\fi
+
+\vstretch
+
+%\newpage
+%\input{api}
+
+%% Last Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Print total marks at the bottom of the last page.
+%\vfil\vskip.5in\vskip-\baselineskip
+%\centerline{Total Marks = \thetotalmarks}
+%% Labels for marks, last page, and last question number.
+\addtocounter{totalmarks}{-1}\refstepcounter{totalmarks}\label{TotalMarks}%
+%\addtocounter{bonusmarks}{-1}\refstepcounter{bonusmarks}\label{BonusMarks}%
+\addtocounter{questionnumber}{-1}\refstepcounter{questionnumber}%
+\label{EndOfExam}%
+%% Foot for last page of test paper.
+\rfoot{{\scshape\small End of \ifsolutions Solutions\else Examination\fi}}%
+
+\end{document}

@@ -1,0 +1,65 @@
+1.
+A. Not OK. value is an uninitialized pointer, 
+so p is an uninitialized pointer. *p = 99 is undefined. 
+
+The fix is to add
+value = malloc(sizeof(int));
+right after
+int *value;
+
+B. Code is fine. Outputs 0.
+
+C. Code is fine. Outputs 4 hello
+
+-----
+
+2.
+We start with
+0000000011011000
+
+x ^= x >> 8;
+does
+  0000000011011000
+^ 0000000000000000
+= 
+  0000000011011000
+i.e. x not modified.
+
+Now
+x ^= x >> 4;
+does
+  0000000011011000
+^ 0000000000001101
+= 0000000011010101
+
+Now
+x ^= x >> 2;
+does
+  0000000011010101
+^ 0000000000110101
+= 0000000011100000
+
+And finally
+x ^= x >> 1;
+does
+  0000000011100000
+^ 0000000001110000
+= 0000000010010000
+
+
+-----
+
+3. See firsts.c.
+
+
+-----
+
+4.
+A.
+fork could fail if the process table is full, or if a user limit on processes is reached.
+exec could fail if the path does not refer to an executable program, or you don't have permissions on a directory on the path or on the program itself.
+
+B. I intended B to be the parent process, and A to be the child. In this case, when A exits, it becomes a zombie process. When B then calls waitpid, it immediately gets the exit status of A. So, waitpid does not fail.
+
+If on the other hand B is not the parent of A, then the waitpid fails because B has no unwaited-for children.
+

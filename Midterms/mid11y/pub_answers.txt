@@ -1,0 +1,38 @@
+Question 1
+
+A. -e causes the interpretation of escape characters (most notably \n for newline).
+
+B. find . -name '*.tmp' -print0 | xargs -0 rm
+
+C. This is a broken link. 'cat' will give an error because the target of the link cannot be found.
+
+
+-----
+
+Question 2
+
+See q2.sh.
+
+
+-----
+
+Question 3
+
+See insert.c.
+
+
+-----
+
+Question 4
+
+A. The function returns a pointer to a local structure variable. 
+When the function terminates,
+that local structure is destroyed,
+so the pointer received by main is pointing to garbage memory.
+
+B.
+s[0] is set to be a pointer to the start of the 'a' string (the 'Z').
+s[1] is set to be a pointer to the 'd'.
+The 'd' then gets changed to an 'l'.
+The output is therefore 'Zella 3'.
+

@@ -1,0 +1,38 @@
+Question 1
+
+A. Read filenames, one per line, from file 'in'.
+Output to file 'out' the number of lines in each of these files.
+
+B. 
+echo SEM >&2
+or
+echo SEM 1>&2
+
+C. The shell uses fork to create a child process, 
+and that child process uses exec to run the user's command. 
+The parent cannot do the exec on its own because that would cause 
+bash to get overwritten with the exec'd program.
+
+
+-----
+
+ Question 2
+ 
+ See numnewer
+ 
+ -----
+
+Question 3
+
+See ll_sol.c
+
+
+-----
+
+Question 4
+
+A. See copystrs_sol.c
+
+B. No. strncat requires the target to already be a 
+string (compare this to strncpy, which does not require this).
+

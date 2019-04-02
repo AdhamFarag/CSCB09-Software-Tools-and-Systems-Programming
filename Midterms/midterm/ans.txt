@@ -1,0 +1,60 @@
+Question 1
+
+A. This code has a problem. p is the return value from malloc, so free(p) right after the malloc would work.
+But once we do p++, now p is no longer an address returned by malloc. 
+So, free(p) after that is undefined. 
+(This is like in assignment 2: you can only sfree(...) something that
+was previously returned by smalloc(...).)
+
+B. This code has a problem. The strncpy copies "abcde" into s,
+but not a '\0' character. Calling strlen is therefore undefined, 
+and likely won't add a '\0' in the proper place. 
+
+C. This code has a problem. Using the -> operator,
+e.g. person1->first, is incorrect because person1 is not a pointer. 
+It is a struct, and -> does not work on structs.
+-> works only on pointers to structs.
+
+-----
+
+Question 2
+
+A. 
+sort <junk >result
+
+The shell must first fork a child. 
+Then, it must open junk using the open system call.
+ It must also open result using the open system call. 
+It must then use dup2 to make standard input refer to the junk file 
+and another dup2 to make standard output refer to the result file. 
+Then it must use exec to replace the child process with sort.
+
+B.
+
+dan:
+    echo hello
+    
+
+-----
+
+    Question 3
+    
+    See coalesce.c
+
+Oops: on the test paper, the word 'struct' was missing in the function header.
+
+-----
+
+Question 4
+
+    int copy_fd(int infd, int outfd) {
+  //infd and outfd are properly-opened FDs.
+  //Copy all bytes from infd to outfd.
+  //Return number of bytes copied.
+  int buf[100], num, total = 0;
+  while ((num = read(infd, buf, 100)) > 0) {
+    total = total + num;
+    write(outfd, buf, num);
+  }
+  return total;
+}
